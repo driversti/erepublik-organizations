@@ -50,3 +50,15 @@ services:
       timeout: 10s
       start_period: 60s
       retries: 3
+
+  website:
+    image: registry.yurii.live/eorganizations-web:latest
+    container_name: eorganizations-web
+    restart: unless-stopped
+    environment:
+      - DB_PATH=/data/orgs.db
+      - PORT=3001
+    volumes:
+      - ./data:/data:ro
+    ports:
+      - "3001:3001"
