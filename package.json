@@ -1,0 +1,14 @@
+{
+  "name": "eorganizations",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fetches and stores eRepublik organization details from a known ID list",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "got-scraping": "^4.0.4"
+  }
+}

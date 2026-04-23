@@ -1,0 +1,109 @@
+{
+  "citizen": {
+    "id": 5332,
+    "name": "Ministry of Defence",
+    "created_at": "2007-12-16",
+    "is_organization": true,
+    "is_alive": true,
+    "has_avatar": true,
+    "avatar_version": null,
+    "avatar_file": null,
+    "level": 1,
+    "avatar": "https://cdnt.erepublik.net/ubWhwZkCUQH-TtaMCCbyG3D-D2M=/142x142/smart/avatars/Citizens/2007/12/16/7070f9088e456682f0f84f815ebda761.jpg",
+    "profile_url": "//www.erepublik.com/en/citizen/profile/5332",
+    "onlineStatus": false,
+    "banStatus": {
+      "type": false,
+      "reason": false
+    },
+    "nextLevelXp": 10
+  },
+  "citizenAttributes": {
+    "citizen_id": 5332,
+    "experience_points": 0,
+    "level": 1
+  },
+  "isAdult": true,
+  "aboutMe": "The official UK Ministry of Defence. Sub to our newspaper for key info and updates!",
+  "location": {
+    "citizenLocationInfo": {
+      "citizen_id": 5332,
+      "citizenship_country_id": 29,
+      "residence_country_id": 29,
+      "residence_region_id": 225
+    },
+    "residenceCountry": {
+      "id": 29,
+      "name": "United Kingdom",
+      "permalink": "United-Kingdom",
+      "empire": 0
+    },
+    "citizenshipCountry": {
+      "id": 29,
+      "name": "United Kingdom",
+      "permalink": "United-Kingdom",
+      "empire": 0
+    },
+    "residenceRegion": {
+      "id": 225,
+      "name": "Yorkshire & Humberside",
+      "current_owner_country_id": 29,
+      "original_owner_country_id": 29,
+      "permalink": "Yorkshire-Humberside"
+    }
+  },
+  "city": {
+    "residenceCityId": null,
+    "residenceRoleName": ""
+  },
+  "isBanned": false,
+  "friends": {
+    "number": 1,
+    "list": [
+      {
+        "id": 4781622,
+        "name": "Sumadinac95",
+        "created_at": "2011-05-11 11:24:00",
+        "is_alive": 0,
+        "is_organization": 0,
+        "has_avatar": 1,
+        "avatar_version": "32a84e1ef5ab79fa44e2f93982502ff9",
+        "avatar_file": "jpg",
+        "avatar": "https://cdnt.erepublik.net/QNPnymqZpsidJF6Wh80-fee5eYE=/30x30/smart/avatars/Citizens/2011/05/11/f8874c6cc3cf1a7543c213d4a561161a.jpg?32a84e1ef5ab79fa44e2f93982502ff9"
+      }
+    ],
+    "isFriend": false,
+    "isFriendRequestPending": false
+  },
+  "newspaper": {
+    "id": 2762,
+    "name": "UK Ministry of Defence",
+    "stripped_title": "uk-ministry-of-defence",
+    "created_at": 1199347200,
+    "has_avatar": 1,
+    "avatar": "//cdnt.erepublik.net/hVwjjJhFMpvSE0fb2vlQ3-NX3t8=/30x30/smart/avatars/Newspapers/2008/01/03/2b6921f2c64dee16ba21ebf17f3c2c92.png?63a78fde3dfb0a8671bdbaf7db486c89"
+  },
+  "isPlatoFoundationCurrentMember": false,
+  "isPlatoFoundationFormerMember": false,
+  "loggedIn": [],
+  "isFallen": false,
+  "organization": {
+    "accounts": [
+      {
+        "type": "currency",
+        "amount": 3301886.39
+      },
+      {
+        "type": "gold",
+        "amount": 7.01
+      }
+    ]
+  },
+  "isLoggedIn": false,
+  "isBlocked": false,
+  "nationalRank": {
+    "xp": 0
+  },
+  "events": [],
+  "activePacksAmount": 0
+}
