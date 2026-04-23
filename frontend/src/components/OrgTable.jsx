@@ -1,25 +1,19 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { formatCurrency, formatGold } from '../lib/format.js';
 
 function Avatar({ src, name }) {
+  const [failed, setFailed] = useState(false);
+  if (!src || failed) {
+    return <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex-shrink-0" />;
+  }
   return (
-    <>
-      {src && (
-        <img
-          src={src}
-          alt={name}
-          className="w-7 h-7 rounded-full object-cover bg-slate-200 dark:bg-slate-700"
-          onError={e => {
-            e.currentTarget.style.display = 'none';
-            e.currentTarget.nextElementSibling.style.display = 'block';
-          }}
-        />
-      )}
-      <div
-        className="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-700"
-        style={{ display: src ? 'none' : 'block' }}
-      />
-    </>
+    <img
+      src={src}
+      alt={name}
+      className="w-8 h-8 rounded-full object-cover bg-slate-200 dark:bg-slate-700 flex-shrink-0"
+      onError={() => setFailed(true)}
+    />
   );
 }
 

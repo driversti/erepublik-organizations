@@ -5,6 +5,8 @@ import OrgTable from '../components/OrgTable.jsx';
 import Pagination from '../components/Pagination.jsx';
 import { getOrgs, getCountries } from '../lib/api.js';
 
+const limit = 50;
+
 export default function Home({ setOrgCount }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -20,7 +22,6 @@ export default function Home({ setOrgCount }) {
   const order   = searchParams.get('order')   || 'desc';
   const search  = searchParams.get('search')  || '';
   const country = searchParams.get('country') || '';
-  const limit   = 50;
 
   function setParam(key, value) {
     setSearchParams(prev => {
