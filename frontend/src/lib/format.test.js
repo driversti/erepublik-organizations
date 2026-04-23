@@ -40,3 +40,23 @@ test('formats zero gold', () => {
 test('handles null gold', () => {
   expect(formatGold(null)).toBe('—');
 });
+
+test('formats 999999 as 1.0M not 1000K', () => {
+  expect(formatCurrency(999999)).toBe('1.0M');
+});
+
+test('formats 999500 as 1.0M not 1000K', () => {
+  expect(formatCurrency(999500)).toBe('1.0M');
+});
+
+test('handles NaN currency', () => {
+  expect(formatCurrency(NaN)).toBe('—');
+});
+
+test('handles Infinity currency', () => {
+  expect(formatCurrency(Infinity)).toBe('—');
+});
+
+test('handles NaN gold', () => {
+  expect(formatGold(NaN)).toBe('—');
+});
