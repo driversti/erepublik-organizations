@@ -5,6 +5,9 @@ REGISTRY="${REGISTRY_URL:-registry.yurii.live}"
 IMAGE_NAME="eorganizations-web"
 TAG="${1:-latest}"
 
+echo "Building frontend..."
+cd frontend && npm run build && cd ..
+
 docker buildx inspect multiarch >/dev/null 2>&1 || \
     docker buildx create --name multiarch --use
 
