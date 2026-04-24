@@ -3,3 +3,9 @@ data
 gluetun
 .env
 .git
+frontend/src
+frontend/public
+frontend/index.html
+frontend/vite.config.js
+frontend/tailwind.config.js
+frontend/postcss.config.js
