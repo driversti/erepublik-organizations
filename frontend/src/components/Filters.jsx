@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function Filters({ search, onSearch, country, onCountry, countries }) {
+export default function Filters({ search, onSearch, country, onCountry, countries, alive, onAlive }) {
   const timer = useRef(null);
 
   function handleSearch(e) {
@@ -30,6 +30,17 @@ export default function Filters({ search, onSearch, country, onCountry, countrie
           <option key={c} value={c}>{c}</option>
         ))}
       </select>
+      <button
+        type="button"
+        onClick={() => onAlive(!alive)}
+        className={`text-sm px-3 py-1.5 rounded-md border font-medium whitespace-nowrap focus:outline-none focus:ring-1 focus:ring-blue-500 transition-colors ${
+          alive
+            ? 'border-green-500 bg-green-500 text-white dark:border-green-500 dark:bg-green-600'
+            : 'border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
+        }`}
+      >
+        ✅ Alive only
+      </button>
     </div>
   );
 }

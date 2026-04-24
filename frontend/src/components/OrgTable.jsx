@@ -4,16 +4,17 @@ import { formatCurrency, formatGold } from '../lib/format.js';
 
 function Avatar({ src, name }) {
   const [failed, setFailed] = useState(false);
-  if (!src || failed) {
-    return <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex-shrink-0" />;
-  }
   return (
-    <img
-      src={src}
-      alt={name}
-      className="w-8 h-8 rounded-full object-cover bg-slate-200 dark:bg-slate-700 flex-shrink-0"
-      onError={() => setFailed(true)}
-    />
+    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 bg-slate-200 dark:bg-slate-700">
+      {src && !failed && (
+        <img
+          src={src}
+          alt={name}
+          className="w-full h-full object-cover"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
   );
 }
 

@@ -22,6 +22,7 @@ export default function Home({ setOrgCount }) {
   const order   = searchParams.get('order')   || 'desc';
   const search  = searchParams.get('search')  || '';
   const country = searchParams.get('country') || '';
+  const alive   = searchParams.get('alive') === '1';
 
   function setParam(key, value) {
     setSearchParams(prev => {
@@ -54,7 +55,7 @@ export default function Home({ setOrgCount }) {
     setLoading(true);
     setError(null);
     try {
-      const data = await getOrgs({ page, limit, search, country, sort, order });
+      const data = await getOrgs({ page, limit, search, country, alive, sort, order });
       setOrgs(data.data);
       setTotal(data.total);
       setPages(data.pages);
@@ -64,7 +65,7 @@ export default function Home({ setOrgCount }) {
     } finally {
       setLoading(false);
     }
-  }, [page, limit, search, country, sort, order, setOrgCount]);
+  }, [page, limit, search, country, alive, sort, order, setOrgCount]);
 
   useEffect(() => { fetchOrgs(); }, [fetchOrgs]);
   useEffect(() => { getCountries().then(setCountries).catch(() => {}); }, []);
@@ -77,6 +78,8 @@ export default function Home({ setOrgCount }) {
         country={country}
         onCountry={v => setParam('country', v)}
         countries={countries}
+        alive={alive}
+        onAlive={v => setParam('alive', v ? '1' : '')}
       />
 
       {error && (

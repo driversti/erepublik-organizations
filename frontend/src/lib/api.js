@@ -6,10 +6,11 @@ async function get(path) {
   return res.json();
 }
 
-export function getOrgs({ page = 1, limit = 50, search = '', country = '', sort = 'currency', order = 'desc' } = {}) {
+export function getOrgs({ page = 1, limit = 50, search = '', country = '', alive = false, sort = 'currency', order = 'desc' } = {}) {
   const params = new URLSearchParams({ page, limit, sort, order });
   if (search)  params.set('search', search);
   if (country) params.set('country', country);
+  if (alive)   params.set('alive', '1');
   return get(`/orgs?${params}`);
 }
 
@@ -23,4 +24,16 @@ export function getCountries() {
 
 export function getStats() {
   return get('/stats');
+}
+
+export function getStatsCountries() {
+  return get('/stats/countries');
+}
+
+export function getStatsWealth() {
+  return get('/stats/wealth');
+}
+
+export function getStatsTimeline() {
+  return get('/stats/timeline');
 }

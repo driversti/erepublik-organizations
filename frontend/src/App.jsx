@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Home from './pages/Home.jsx';
 import OrgDetail from './pages/OrgDetail.jsx';
+import Stats from './pages/Stats.jsx';
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -28,6 +29,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home setOrgCount={setOrgCount} />} />
             <Route path="/org/:id" element={<OrgDetail />} />
+            <Route path="/stats" element={<Stats />} />
           </Routes>
         </main>
       </div>

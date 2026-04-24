@@ -14,6 +14,9 @@ export default function Navbar({ toggleTheme, theme, orgCount }) {
           </span>
         )}
         <div className="flex-1" />
+        <Link to="/stats" className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 transition-colors">
+          Stats
+        </Link>
         <ThemeToggle theme={theme} toggle={toggleTheme} />
       </div>
     </nav>
